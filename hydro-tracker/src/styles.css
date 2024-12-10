@@ -1,0 +1,148 @@
+:root {
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --color-primary: #1e90ff;
+  --color-secondary: #87cefa;
+  --color-background: #f0f8ff;
+  --color-text: #333;
+  --color-border: #ccc;
+  --color-hover: #4682b4;
+  --color-focus: #5f9ea0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  color: var(--color-primary);
+}
+
+input, button {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+input:focus, button:focus {
+  outline: none;
+  border-color: var(--color-focus);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-hover);
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 1em;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.table th, .table td {
+  padding: 0.75em;
+  border: 1px solid var(--color-border);
+}
+
+.table th {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.table td {
+  background-color: var(--color-background);
+}
+
+.navbar {
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 1em;
+}
+
+.navbar a, .navbar button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+}
+
+.navbar a:hover, .navbar button:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5em;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar li {
+    margin: 0.5em 0;
+  }
+
+  .table th, .table td {
+    padding: 0.5em;
+  }
+
+  input, button {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+}
